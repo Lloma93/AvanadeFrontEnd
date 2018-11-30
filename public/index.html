@@ -6,146 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <title>GitHub Wars</title>
+
+  
 </head>
-<body>
+<body >
   <div class="container">
-     
-    <div id="conteudo1">
-                <img src="img/icongit.png" width="124px">
-                <h1>GitHub Wars</h1>
-              <div id="usuarios"> 
-                <input type="text" id="nomeUsuario1"> 
-                <h1 id="vs">VS</h1> 
-                <input type="text" id="nomeUsuario2">
-              </div>   
-                <button  class="btnFight" onclick="resultado()"> FIGHT! </button>
+       <div id="conteudo1">
+          <img src="img/icongit.png" width="124px">
+          <h1>GitHub Wars</h1>
+      <div id="usuarios"> 
+          <input type="text" id="nomeUsuario1"> 
+          <h1 id="vs">VS</h1> 
+           <input type="text" id="nomeUsuario2">
+      </div>   
+      <button  class="btnFight" onclick="resultado()"> FIGHT! </button>
     </div>
-   
-    <div id="dadosUsuario1"> <h1 id="vs1">VS</h1>
-        <div style="display:flex"><h3 id="usuario1">PALLOMA ADOLFI</h3> </div>
-        <div id="imgUsuario1"> </div>
-         
+
+<br>
+
+     <div id="conteudo2">
+        <div id="usuarios"> 
+            <div id="imgUsuario1"> </div>
+            <h1 id="vs">VS</h1> 
+            <div id="imgUsuario2"> </div>
+        </div>  
+
+        <div id="ganhador"> 
+         <img src="" id="ganhador1" >
+         <img src="img/trophy.png" id="ganhador2" >
+        </div>
+        <br>
+        
+        
+        <div id="tabelas"> 
+                <table border="1" id="tabela1">
+                        <tr>
+                        <th>Critério</th>
+                        <th>qtd.</th>
+                        <th>Total</th>
+                        </tr>
+
+                        <tr>
+                        <td>Repositório público</td>
+                        <td></td>
+                        <td></td>
+                       </tr>
+
+                        <tr>
+                        <td>Followers</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                        <td>Seguindo</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+
+                        <td>Estrela</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                        <td>Gists</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+
+                        <td>A definir</td>
+                        <td></td>
+                        <td></td>
+                         </tr>
+
+                        </table>
+                <h1></h1> 
+                <table border="1" id="tabela2">
+                        <tr>
+                        <th>Critério</th>
+                        <th>qtd.</th>
+                        <th>Total</th>
+                        </tr>
+
+                        <tr>
+                        <td>Repositório público</td>
+                        <td></td>
+                        <td></td>
+                       </tr>
+
+                        <tr>
+                        <td>Followers</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                        <td>Seguindo</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+
+                        <td>Estrela</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                        <td>Gists</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+
+                        <td>A definir</td>
+                        <td></td>
+                        <td></td>
+                         </tr>
+
+                        </table>
+        </div>  
+        <div id="total"> 
+        <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> 100 pnts</h3> </div>
+        <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> 100 pnts</h3> </div>
+              
+        </div> 
+      </div>  
        
-        <img src="img/trophy.png" id="ganhador1"> <br><br>
-        <table border="1" id="tabela1">
-            <tr>
-            <th>Critério</th>
-            <th>qtd.</th>
-            <th>Total</th>
-            </tr>
-
-            <tr>
-            <td>Repositório público</td>
-            <td></td>
-            <td></td>
-           </tr>
-
-            <tr>
-            <td>Followers</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>Seguindo</td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-
-            <td>Estrela</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>Gists</td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-
-            <td>Blog</td>
-            <td></td>
-            <td></td>
-             </tr>
-
-            </table>
-            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> 100 pnts</h3> </div>
-    </div>
-
-    <div id="dadosUsuario2">
-        <div style="display:flex"><h3 id="usuario2"> INGLID IANKA</h3></div>
-        <div id="imgUsuario2"></div>
-        <img src="img/trophy.png" id="ganhador2">
-        <br><br>
-
-        <table border="1" id="tabela2">
-            <tr>
-            <th>Critério</th>
-            <th>qtd.</th>
-            <th>Total</th>
-            </tr>
-
-            <tr>
-            <td>Repositório público</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>Followers</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>Seguindo</td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-
-            <td>Estrela</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            <tr>
-            <td>Gists</td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-
-            <td>Blog</td>
-            <td></td>
-            <td></td>
-            </tr>
-
-            </table>
-            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> 100 pnts</h3> </div>
-    </div>
-  </div>
-
-<script>
-    function resultado() {
-        var index = document.getElementById("conteudo1");
-        var dados1 = document.getElementById("dadosUsuario1");
-        var dados2 = document.getElementById("dadosUsuario2");
-      
-        if (index.style.display === "none") {
-            dados1.style.display = "none";
-            dados2.style.display = "none";
-            index.style.display = "flex";
+   
+    </div>  
+    <script>
+        function resultado() {
+             var index = document.getElementById("conteudo1");
+             var resultado = document.getElementById("conteudo2");
+           
+            if (index.style.display === "none") {
+                resultado.style.display = "none";
+                index.style.display = "flex";
+                
+            } else {
+                index.style.display = "none";
+                resultado.style.display = "flex";
+            }
         }
-        else {
-            index.style.display = "none";
-            dados1.style.display = "flex";
-            dados2.style.display = "flex";
-        }
-    }
-</script>
- 
+        </script>
+    
 </body>
-</html> 
+</html>
