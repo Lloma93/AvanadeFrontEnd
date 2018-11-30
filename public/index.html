@@ -143,7 +143,7 @@
         var nomeUsuario2 = document.getElementById("nomeUsuario2").value;
 
         //processa dados usuário 1
-         getDataApi(nomeUsuario1, function (user) {
+         getUserFromApi(nomeUsuario1, function (user) {
              console.log('meu user github:', user);
              var nome = user.name;
 
@@ -168,10 +168,13 @@
              }
              atualizaValorDaTabela1(7,2,contaBlog);
              atualizaValorDaTabela1(7,3,contaBlog * 100);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 846e6e3cad7f9fcd3e63567c9422916834bbb06d
              document.getElementById("imgUsuario1").style.backgroundImage="url("+ fotoUser1+")";
              document.getElementById("usuario1").innerHTML = nome;
-             getUserStars(nomeUsuario1, function (stars) {
+             getUserStarsFromApi(nomeUsuario1, function (stars) {
                atualizaValorDaTabela1(5,2,stars);
                atualizaValorDaTabela1(5,3,stars * 10);
 
@@ -182,7 +185,7 @@
              })
          });
          //processa dados usuário 2
-          getDataApi(nomeUsuario2, function (user) {
+          getUserFromApi(nomeUsuario2, function (user) {
               console.log('meu user github 2:', user);
               var nome = user.name;
 
@@ -209,6 +212,7 @@
 
               document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
               document.getElementById("usuario2").innerHTML = nome;
+<<<<<<< HEAD
               getUserStars(nomeUsuario2, function (stars) {
                atualizaValorDaTabela2(5,2,stars);
                atualizaValorDaTabela2(5,3,stars * 10);
@@ -229,6 +233,14 @@
         }
 
 
+=======
+              getUserStarsFromApi(nomeUsuario2, function (stars) {
+                atualizaValorDaTabela2(5,2,stars);
+                atualizaValorDaTabela2(5,3,stars * 10);
+              })
+          });
+
+>>>>>>> 846e6e3cad7f9fcd3e63567c9422916834bbb06d
         if (index.style.display === "none") {
             dados1.style.display = "none";
             dados2.style.display = "none";

@@ -1,4 +1,4 @@
-function  getUserStars( user , callback) {
+function  getUserStarsFromApi( user , callback) {
     var xhttp = new XMLHttpRequest();
     let response;
     xhttp.onload = function() {
