@@ -57,8 +57,16 @@ body {
    margin-top:-102px;
    position: absolute;
    margin-left: 60px;
-   visibility: hidden;
+   
 }
+
+#ganhador1{
+   visibility: hidden; 
+}
+#ganhador2{
+    visibility: hidden; 
+ }
+ 
 
 #tabelas{
    width: 650px;
