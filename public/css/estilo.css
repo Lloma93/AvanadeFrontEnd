@@ -8,17 +8,33 @@ body {
     background-repeat: no-repeat;
     background-size: cover; 
     background-color: #161213;
- }
+    
+}
 
 .container{
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     height: 100%;
 }
 
+#dadosUsuario1,#dadosUsuario2{
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    flex-direction: column;
+    height: 97vh;
+}
 
-
-#conteudo1, #conteudo2{
+#dadosUsuario1{
+    margin-left: 21%;
+}
+  
+#dadosUsuario2{
+    margin-right: 21%;
+}
+ 
+#conteudo1{
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -28,36 +44,19 @@ body {
     
 }
 
-#conteudo2{
-  display:none;    
+#usuarios, #ganhador{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 500px;
 }
 
-#usuarios,#ganhador, #tabelas{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 500px;
-}
-
-
-#total {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-   
-    width: 487px;
-}
-
-
-#usuarios{
-    
-}
-
-#ganhador{
-    margin-top:-42px;
-   
+ 
+#ganhador1, #ganhador2{
+   margin-top:-102px;
+   position: absolute;
+   margin-left: 60px;  
 }
 
 #tabelas{
@@ -75,32 +74,31 @@ body {
     font-weight: bold;
     outline: none;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
-   
-    
-   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
 }
 
 h1{
     font-size: 3em;
     color:#d6d6d6;
     font-family:Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 4px #231c1e;
-    
-   
+    text-shadow: 2px 2px 4px #231c1e;   
 }
 
-#vs{
+#vs,#vs1{
     color:#e09d45;
     font-style: italic;
     text-shadow: 2px 2px 4px #231c1e;
 }
 
+#vs1{
+   position: absolute;
+   margin-left:190px;
+   margin-top: -160px;
+}
+
 h3{
     color:#d6d6d6;
-    font-family:Arial, Helvetica, sans-serif;
-    
+    font-family:Arial, Helvetica, sans-serif;    
 }
 
 
@@ -161,7 +159,8 @@ table h4 {
 	font-size:140%;
 	font-weight:normal;
 	margin:0px;
-}
+} 
+
 
 #imgUsuario1{
     height: 120px;
@@ -179,3 +178,5 @@ table h4 {
     background-color: #888;
 }
     
+
+  
