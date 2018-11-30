@@ -5,154 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script type="text/javascript" src="js/getUserFromApi.js"></script>
+    <script type="text/javascript" src="js/getUserStarsFromApi.js"></script>
     <title>GitHub Wars</title>
-
-  
 </head>
-<body >
+<body>
   <div class="container">
-       <div id="conteudo1">
-          <img src="img/icongit.png" width="124px">
-          <h1>GitHub Wars</h1>
-      <div id="usuarios"> 
-          <input type="text" id="nomeUsuario1"> 
-          <h1 id="vs">VS</h1> 
-           <input type="text" id="nomeUsuario2">
-      </div>   
-      <button  class="btnFight" onclick="resultado()"> FIGHT! </button>
+
+    <div id="conteudo1">
+                <img src="img/icongit.png" width="124px">
+                <h1>GitHub Wars</h1>
+              <div id="usuarios">
+                <input type="text" id="nomeUsuario1">
+                <h1 id="vs">VS</h1>
+                <input type="text" id="nomeUsuario2">
+              </div>
+                <button  class="btnFight" onclick="resultado()"> FIGHT! </button>
     </div>
 
-<br>
+    <div id="dadosUsuario1"> <h1 id="vs1">VS</h1>
+        <div style="display:flex"><h3 id="usuario1">PALLOMA ADOLFI</h3> </div>
+        <div id="imgUsuario1"> </div>
 
-     <div id="conteudo2">
-        <div id="usuarios"> 
-            <div id="imgUsuario1"> </div>
-            <h1 id="vs">VS</h1> 
-            <div id="imgUsuario2"> </div>
-        </div>  
 
-        <div id="ganhador"> 
-         <img src="" id="ganhador1" >
-         <img src="img/trophy.png" id="ganhador2" >
-        </div>
-        <br>
-        
-        
-        <div id="tabelas"> 
-                <table border="1" id="tabela1">
-                        <tr>
-                        <th>Critério</th>
-                        <th>qtd.</th>
-                        <th>Total</th>
-                        </tr>
+        <img src="img/trophy.png" id="ganhador1"> <br><br>
+        <table border="1" id="tabela1">
+            <tr>
+            <th>Critério</th>
+            <th>qtd.</th>
+            <th>Total</th>
+            </tr>
 
-                        <tr>
-                        <td>Repositório público</td>
-                        <td></td>
-                        <td></td>
-                       </tr>
+            <tr>
+            <td>Repositório público</td>
+            <td></td>
+            <td></td>
+           </tr>
 
-                        <tr>
-                        <td>Followers</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
+            <tr>
+            <td>Followers</td>
+            <td></td>
+            <td></td>
+            </tr>
 
-                        <tr>
-                        <td>Seguindo</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
+            <tr>
+            <td>Seguindo</td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
 
-                        <td>Estrela</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
+            <td>Estrela</td>
+            <td></td>
+            <td></td>
+            </tr>
 
-                        <tr>
-                        <td>Gists</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
+            <tr>
+            <td>Gists</td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
 
-                        <td>A definir</td>
-                        <td></td>
-                        <td></td>
-                         </tr>
+            <td>Blog</td>
+            <td></td>
+            <td></td>
+             </tr>
 
-                        </table>
-                <h1></h1> 
-                <table border="1" id="tabela2">
-                        <tr>
-                        <th>Critério</th>
-                        <th>qtd.</th>
-                        <th>Total</th>
-                        </tr>
+            </table>
+            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> 100 pnts</h3> </div>
+    </div>
 
-                        <tr>
-                        <td>Repositório público</td>
-                        <td></td>
-                        <td></td>
-                       </tr>
+    <div id="dadosUsuario2">
+        <div style="display:flex"><h3 id="usuario2"> INGLID IANKA</h3></div>
+        <div id="imgUsuario2"></div>
+        <img src="img/trophy.png" id="ganhador2">
+        <br><br>
 
-                        <tr>
-                        <td>Followers</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
+        <table border="1" id="tabela2">
+            <tr>
+            <th>Critério</th>
+            <th>qtd.</th>
+            <th>Total</th>
+            </tr>
 
-                        <tr>
-                        <td>Seguindo</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
+            <tr>
+            <td>Repositório público</td>
+            <td></td>
+            <td></td>
+            </tr>
 
-                        <td>Estrela</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
+            <tr>
+            <td>Followers</td>
+            <td></td>
+            <td></td>
+            </tr>
 
-                        <tr>
-                        <td>Gists</td>
-                        <td></td>
-                        <td></td>
-                        </tr>
-                        <tr>
+            <tr>
+            <td>Seguindo</td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
 
-                        <td>A definir</td>
-                        <td></td>
-                        <td></td>
-                         </tr>
+            <td>Estrela</td>
+            <td></td>
+            <td></td>
+            </tr>
 
-                        </table>
-        </div>  
-        <div id="total"> 
-        <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> 100 pnts</h3> </div>
-        <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> 100 pnts</h3> </div>
-              
-        </div> 
-      </div>  
-       
-   
-    </div>  
-    <script>
-        function resultado() {
-             var index = document.getElementById("conteudo1");
-             var resultado = document.getElementById("conteudo2");
-           
-            if (index.style.display === "none") {
-                resultado.style.display = "none";
-                index.style.display = "flex";
-                
-            } else {
-                index.style.display = "none";
-                resultado.style.display = "flex";
-            }
+            <tr>
+            <td>Gists</td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+
+            <td>Blog</td>
+            <td></td>
+            <td></td>
+            </tr>
+
+            </table>
+            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> 100 pnts</h3> </div>
+    </div>
+  </div>
+
+<script>
+    function resultado() {
+
+        var index = document.getElementById("conteudo1");
+        var dados1 = document.getElementById("dadosUsuario1");
+        var dados2 = document.getElementById("dadosUsuario2");
+
+        //recebe dados do competidor 1
+        var nomeUsuario1 = document.getElementById("nomeUsuario1").value;
+        //recebe dados do competidor 2
+        var nomeUsuario2 = document.getElementById("nomeUsuario2").value;
+
+        //processa dados usuário 1
+         getDataApi(nomeUsuario1, function (user) {
+             console.log('meu user github:', user);
+             var nome = user.name;
+
+             var fotoUser1 = user.avatar_url;
+             atualizaValorDaTabela1(2,2,user.public_repos);
+             atualizaValorDaTabela1(3,2, user.followers);
+             atualizaValorDaTabela1(4,2,user.following);
+             atualizaValorDaTabela1(6,2,user.public_gists);
+             var contaBlog= 0;
+             var blog = user.blog
+             if (blog != null && blog != '') {
+              contaBlog = 1;
+             }
+             else {
+               contaBlog = 0;
+             }
+             atualizaValorDaTabela1(7,2,contaBlog);
+             document.getElementById("usuario1").innerHTML = nome;
+             getUserStars(nomeUsuario1, function (user) {
+               atualizaValorDaTabela1(5,2,user);
+             })
+         });
+         //processa dados usuário 2
+          getDataApi(nomeUsuario2, function (user) {
+              console.log('meu user github 2:', user);
+              var nome = user.name;
+
+              var fotoUser2 = user.avatar_url;
+              atualizaValorDaTabela2(2,2,user.public_repos);
+              atualizaValorDaTabela2(3,2, user.followers);
+              atualizaValorDaTabela2(4,2,user.following);
+              atualizaValorDaTabela2(6,2,user.public_gists);
+              var contaBlog= 0;
+              var blog = user.blog
+              if (blog != null && blog != '') {
+               contaBlog = 1;
+              }
+              else {
+                contaBlog = 0;
+              }
+              atualizaValorDaTabela2(7,2,contaBlog);
+              document.getElementById("usuario2").innerHTML = nome;
+              getUserStars(nomeUsuario2, function (user) {
+                atualizaValorDaTabela2(5,2,user);
+              })
+          });
+
+
+
+
+        if (index.style.display === "none") {
+            dados1.style.display = "none";
+            dados2.style.display = "none";
+            index.style.display = "flex";
         }
-        </script>
-    
+        else {
+            index.style.display = "none";
+            dados1.style.display = "flex";
+            dados2.style.display = "flex";
+        }
+    }
+
+    function atualizaValorDaTabela1(linha,coluna,valor) {
+        var x = document.getElementById("tabela1").rows[linha-1].cells;
+        x[coluna-1].innerHTML = valor;
+    }
+    function atualizaValorDaTabela2(linha,coluna,valor) {
+        var x = document.getElementById("tabela2").rows[linha-1].cells;
+        x[coluna-1].innerHTML = valor;
+    }
+</script>
 </body>
 </html>
