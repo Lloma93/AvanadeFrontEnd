@@ -1,4 +1,4 @@
-function  getDataApi( user , callback) {
+function  getUserFromApi( user , callback) {
     var xhttp = new XMLHttpRequest();
     let response;
     xhttp.onload = function() {

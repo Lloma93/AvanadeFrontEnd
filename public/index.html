@@ -143,7 +143,7 @@
         var nomeUsuario2 = document.getElementById("nomeUsuario2").value;
 
         //processa dados usuário 1
-         getDataApi(nomeUsuario1, function (user) {
+         getUserFromApi(nomeUsuario1, function (user) {
              console.log('meu user github:', user);
              var nome = user.name;
 
@@ -166,19 +166,16 @@
                contaBlog = 0;
              }
              atualizaValorDaTabela1(7,2,contaBlog);
-<<<<<<< HEAD
              atualizaValorDaTabela1(7,3,contaBlog * 100);
-=======
              document.getElementById("imgUsuario1").style.backgroundImage="url("+ fotoUser1+")";
->>>>>>> 76af12b0baeb79ec9b45c8952d932b76975f367e
              document.getElementById("usuario1").innerHTML = nome;
-             getUserStars(nomeUsuario1, function (stars) {
+             getUserStarsFromApi(nomeUsuario1, function (stars) {
                atualizaValorDaTabela1(5,2,stars);
                atualizaValorDaTabela1(5,3,stars * 10);
              })
          });
          //processa dados usuário 2
-          getDataApi(nomeUsuario2, function (user) {
+          getUserFromApi(nomeUsuario2, function (user) {
               console.log('meu user github 2:', user);
               var nome = user.name;
 
@@ -201,20 +198,15 @@
                 contaBlog = 0;
               }
               atualizaValorDaTabela2(7,2,contaBlog);
-<<<<<<< HEAD
               atualizaValorDaTabela2(7,3,contaBlog * 100);
-=======
+
               document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
->>>>>>> 76af12b0baeb79ec9b45c8952d932b76975f367e
               document.getElementById("usuario2").innerHTML = nome;
-              getUserStars(nomeUsuario2, function (stars) {
+              getUserStarsFromApi(nomeUsuario2, function (stars) {
                 atualizaValorDaTabela2(5,2,stars);
                 atualizaValorDaTabela2(5,3,stars * 10);
               })
           });
-
-
-
 
         if (index.style.display === "none") {
             dados1.style.display = "none";
