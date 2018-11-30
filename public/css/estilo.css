@@ -57,6 +57,7 @@ body {
    margin-top:-102px;
    position: absolute;
    margin-left: 60px;
+   visibility: hidden;
 }
 
 #tabelas{
