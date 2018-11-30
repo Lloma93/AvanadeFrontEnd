@@ -1,14 +1,14 @@
-body { 
+body {
     /* imagem */
     background-image: url("../img/bg.jpg");
     /* Full altura */
-    height: 97vh; 
-    background-position: center; 
+    height: 97vh;
+    background-position: center;
     /* imagem posicionada ao centro */
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-color: #161213;
-    
+
 }
 
 .container{
@@ -29,11 +29,11 @@ body {
 #dadosUsuario1{
     margin-left: 21%;
 }
-  
+
 #dadosUsuario2{
     margin-right: 21%;
 }
- 
+
 #conteudo1{
     width: 100%;
     justify-content: center;
@@ -41,7 +41,7 @@ body {
     display:flex;
     flex-direction: column;
     margin: auto;
-    
+
 }
 
 #usuarios, #ganhador{
@@ -52,11 +52,11 @@ body {
    width: 500px;
 }
 
- 
+
 #ganhador1, #ganhador2{
    margin-top:-102px;
    position: absolute;
-   margin-left: 60px;  
+   margin-left: 60px;
 }
 
 #tabelas{
@@ -74,14 +74,14 @@ body {
     font-weight: bold;
     outline: none;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h1{
     font-size: 3em;
     color:#d6d6d6;
     font-family:Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 4px #231c1e;   
+    text-shadow: 2px 2px 4px #231c1e;
 }
 
 #vs,#vs1{
@@ -98,11 +98,11 @@ h1{
 
 h3{
     color:#d6d6d6;
-    font-family:Arial, Helvetica, sans-serif;    
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 
-.btnFight { 
+.btnFight {
     box-sizing: border-box;
     width: 90px;
     font-size: 16px;
@@ -119,9 +119,9 @@ h3{
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-   
+
 }
-      
+
 .btnFight:hover { background-position: 100% 0; -webkit-transition: all .4s ease-in-out; transition: all .4s ease-in-out;}
 .btnFight:active {outline: none;width:78px; heigth:78px;}
 .btnFight:focus {outline: none;}
@@ -159,7 +159,7 @@ table h4 {
 	font-size:140%;
 	font-weight:normal;
 	margin:0px;
-} 
+}
 
 
 #imgUsuario1{
@@ -173,10 +173,7 @@ table h4 {
 #imgUsuario2{
     height: 120px;
     width: 120px;
-    background-image: url('');
+    background-image: ;
     background-size:cover;
     background-color: #888;
 }
-    
-
-  
