@@ -24,7 +24,7 @@
     </div>
 
     <div id="dadosUsuario1"> <h1 id="vs1">VS</h1>
-        <div style="display:flex"><h3 id="usuario1">PALLOMA ADOLFI</h3> </div>
+        <div style="display:flex"><h3 id="usuario1"></h3> </div>
         <div id="imgUsuario1"> </div>
 
 
@@ -73,11 +73,11 @@
              </tr>
 
             </table>
-            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> 100 pnts</h3> </div>
+            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total1"> pnts</h3> </div>
     </div>
 
     <div id="dadosUsuario2">
-        <div style="display:flex"><h3 id="usuario2"> INGLID IANKA</h3></div>
+        <div style="display:flex"><h3 id="usuario2"></h3></div>
         <div id="imgUsuario2"></div>
         <img src="img/trophy.png" id="ganhador2">
         <br><br>
@@ -126,7 +126,7 @@
             </tr>
 
             </table>
-            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> 100 pnts</h3> </div>
+            <div style="display:flex"> <h3>Total:</h3> &nbsp; <h3 id="total2"> pnts</h3> </div>
     </div>
   </div>
 
@@ -157,6 +157,7 @@
              atualizaValorDaTabela1(3,3, user.followers * 10);
              atualizaValorDaTabela1(4,3,user.following * 5);
              atualizaValorDaTabela1(6,3,user.public_gists * 5);
+
              var contaBlog= 0;
              var blog = user.blog
              if (blog != null && blog != '') {
@@ -166,15 +167,18 @@
                contaBlog = 0;
              }
              atualizaValorDaTabela1(7,2,contaBlog);
-<<<<<<< HEAD
              atualizaValorDaTabela1(7,3,contaBlog * 100);
-=======
+
              document.getElementById("imgUsuario1").style.backgroundImage="url("+ fotoUser1+")";
->>>>>>> 76af12b0baeb79ec9b45c8952d932b76975f367e
              document.getElementById("usuario1").innerHTML = nome;
              getUserStars(nomeUsuario1, function (stars) {
                atualizaValorDaTabela1(5,2,stars);
                atualizaValorDaTabela1(5,3,stars * 10);
+
+               var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
+               var total1 = document.getElementById('total1');
+               total1.innerText = somaPontos;
+
              })
          });
          //processa dados usuário 2
@@ -201,19 +205,28 @@
                 contaBlog = 0;
               }
               atualizaValorDaTabela2(7,2,contaBlog);
-<<<<<<< HEAD
               atualizaValorDaTabela2(7,3,contaBlog * 100);
-=======
+
               document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
->>>>>>> 76af12b0baeb79ec9b45c8952d932b76975f367e
               document.getElementById("usuario2").innerHTML = nome;
               getUserStars(nomeUsuario2, function (stars) {
-                atualizaValorDaTabela2(5,2,stars);
-                atualizaValorDaTabela2(5,3,stars * 10);
+               atualizaValorDaTabela2(5,2,stars);
+               atualizaValorDaTabela2(5,3,stars * 10);
+
+               var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
+               var total2 = document.getElementById('total2');
+               total1.innerText = somaPontos;
               })
           });
 
+        var total1 = document.getElementById(total1);
+        var total2 = document.getElementById(total2);
 
+        if (total1 > total2) {
+            document.getElementById("ganhador1").style.visibility = "visible";
+        }if (total2 > total1){
+            document.getElementById("ganhador2").style.visibility = "visible";
+        }
 
 
         if (index.style.display === "none") {
