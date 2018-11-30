@@ -2,7 +2,7 @@
 
 Exercício: GITHUB FIGHT
 
-
+https://github-fight.netlify.com/
 
 Equipe 
 --------------

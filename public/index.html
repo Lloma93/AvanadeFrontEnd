@@ -174,63 +174,67 @@
                atualizaValorDaTabela1(5,2,stars);
                atualizaValorDaTabela1(5,3,stars * 10);
 
-               var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
+               var somaPontos1 = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
                var total1 = document.getElementById('total1');
-               total1.innerText = somaPontos;
-               
+               total1.innerText = somaPontos1;
+
 
              })
-         });
-         //processa dados usuário 2
-          getUserFromApi(nomeUsuario2, function (user) {
-              console.log('meu user github 2:', user);
-              var nome = user.name;
 
-              var fotoUser2 = user.avatar_url;
-              atualizaValorDaTabela2(2,2,user.public_repos);
-              atualizaValorDaTabela2(3,2, user.followers);
-              atualizaValorDaTabela2(4,2,user.following);
-              atualizaValorDaTabela2(6,2,user.public_gists);
+             //processa dados usuário 2
+              getUserFromApi(nomeUsuario2, function (user) {
+                  console.log('meu user github 2:', user);
+                  var nome = user.name;
 
-              atualizaValorDaTabela2(2,3,user.public_repos * 20);
-              atualizaValorDaTabela2(3,3, user.followers * 10);
-              atualizaValorDaTabela2(4,3,user.following * 5);
-              atualizaValorDaTabela2(6,3,user.public_gists * 5);
-              var contaBlog= 0;
-              var blog = user.blog
-              if (blog != null && blog != '') {
-               contaBlog = 1;
-              }
-              else {
-                contaBlog = 0;
-              }
-              atualizaValorDaTabela2(7,2,contaBlog);
-              atualizaValorDaTabela2(7,3,contaBlog * 100);
+                  var fotoUser2 = user.avatar_url;
+                  atualizaValorDaTabela2(2,2,user.public_repos);
+                  atualizaValorDaTabela2(3,2, user.followers);
+                  atualizaValorDaTabela2(4,2,user.following);
+                  atualizaValorDaTabela2(6,2,user.public_gists);
 
-              document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
-              document.getElementById("usuario2").innerHTML = nome;
-              getUserStarsFromApi(nomeUsuario2, function (stars) {
-                  console.log('qq coisa');
-                atualizaValorDaTabela2(5,2,stars);
-                atualizaValorDaTabela2(5,3,stars * 10);
-                var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
-                var total2 = document.getElementById('total2');
-                total2.innerText = somaPontos;
+                  atualizaValorDaTabela2(2,3,user.public_repos * 20);
+                  atualizaValorDaTabela2(3,3, user.followers * 10);
+                  atualizaValorDaTabela2(4,3,user.following * 5);
+                  atualizaValorDaTabela2(6,3,user.public_gists * 5);
+                  var contaBlog= 0;
+                  var blog = user.blog
+                  if (blog != null && blog != '') {
+                   contaBlog = 1;
+                  }
+                  else {
+                    contaBlog = 0;
+                  }
+                  atualizaValorDaTabela2(7,2,contaBlog);
+                  atualizaValorDaTabela2(7,3,contaBlog * 100);
 
-                var total1Text = parseInt(document.getElementById('total1').innerText);
-                var total2Text = parseInt(document.getElementById('total2').innerText);
+                  document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
+                  document.getElementById("usuario2").innerHTML = nome;
+                  getUserStarsFromApi(nomeUsuario2, function (stars) {
+                      console.log('qq coisa');
+                    atualizaValorDaTabela2(5,2,stars);
+                    atualizaValorDaTabela2(5,3,stars * 10);
+                    var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
+                    var total2 = document.getElementById('total2');
+                    total2.innerText = somaPontos;
 
-                if (total2Text > total1Text) {
-                    document.getElementById("ganhador2").style.visibility = "visible";
-                    console.log('1 Pontuacao 1:', total1Text);
-                    console.log('1 Pontuacao 2:', total2Text);
-                }else/*  (total2Text > total1Text) */{
-                    document.getElementById("ganhador1").style.visibility = "visible";
-                    console.log('2 Pontuacao 1:', total1Text);
-                    console.log('2 Pontuacao 2:', total2Text);
-                }
+                    var total1Text = document.getElementById('total1').innerText;
+                    var total2Text = parseInt(document.getElementById('total2').innerText);
+
+                    if (total2Text > total1Text) {
+                      console.log(total1Text);
+                        document.getElementById("ganhador2").style.visibility = "visible";
+                        console.log('1 Pontuacao 1:', total1Text);
+                        console.log('1 Pontuacao 2:', total2Text);
+                    }else/*  (total2Text > total1Text) */{
+                        document.getElementById("ganhador1").style.visibility = "visible";
+                        console.log('2 Pontuacao 1:', total1Text);
+                        console.log('2 Pontuacao 2:', total2Text);
+                    }
+                  });
               });
-          });
+
+         });
+
 
         if (index.style.display === "none") {
             dados1.style.display = "none";
