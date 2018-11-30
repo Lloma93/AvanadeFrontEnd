@@ -161,6 +161,7 @@
                contaBlog = 0;
              }
              atualizaValorDaTabela1(7,2,contaBlog);
+             document.getElementById("imgUsuario1").style.backgroundImage="url("+ fotoUser1+")";
              document.getElementById("usuario1").innerHTML = nome;
              getUserStars(nomeUsuario1, function (user) {
                atualizaValorDaTabela1(5,2,user);
@@ -185,8 +186,8 @@
                 contaBlog = 0;
               }
               atualizaValorDaTabela2(7,2,contaBlog);
+              document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
               document.getElementById("usuario2").innerHTML = nome;
-              document.getElementById("id").style.backgroundImage="url("+ fotoUser2 +")";
               getUserStars(nomeUsuario2, function (user) {
                 atualizaValorDaTabela2(5,2,user);
               })
