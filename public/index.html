@@ -168,10 +168,6 @@
              }
              atualizaValorDaTabela1(7,2,contaBlog);
              atualizaValorDaTabela1(7,3,contaBlog * 100);
-<<<<<<< HEAD
-
-=======
->>>>>>> 846e6e3cad7f9fcd3e63567c9422916834bbb06d
              document.getElementById("imgUsuario1").style.backgroundImage="url("+ fotoUser1+")";
              document.getElementById("usuario1").innerHTML = nome;
              getUserStarsFromApi(nomeUsuario1, function (stars) {
@@ -212,35 +208,24 @@
 
               document.getElementById("imgUsuario2").style.backgroundImage="url("+ fotoUser2+")";
               document.getElementById("usuario2").innerHTML = nome;
-<<<<<<< HEAD
-              getUserStars(nomeUsuario2, function (stars) {
-               atualizaValorDaTabela2(5,2,stars);
-               atualizaValorDaTabela2(5,3,stars * 10);
-
-               var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
-               var total2 = document.getElementById('total2');
-               total1.innerText = somaPontos;
-              })
-          });
-
-        var total1 = document.getElementById(total1);
-        var total2 = document.getElementById(total2);
-
-        if (total1 > total2) {
-            document.getElementById("ganhador1").style.visibility = "visible";
-        }if (total2 > total1){
-            document.getElementById("ganhador2").style.visibility = "visible";
-        }
-
-
-=======
               getUserStarsFromApi(nomeUsuario2, function (stars) {
                 atualizaValorDaTabela2(5,2,stars);
                 atualizaValorDaTabela2(5,3,stars * 10);
-              })
+                var somaPontos = (user.public_repos * 20) + (user.followers * 10) + (user.following * 5) + (user.public_gists * 5) + (contaBlog * 100) + (stars * 10);
+                var total2 = document.getElementById('total2');
+                total2.innerText = somaPontos;
+
+                var total1Text = parseInt(document.getElementById('total1').innerText);
+                var total2Text = parseInt(document.getElementById('total2').innerText);
+
+                if (total1Text > total2Text) {
+                    document.getElementById("ganhador1").style.visibility = "visible";
+                }else if (total2Text > total1Text){
+                    document.getElementById("ganhador2").style.visibility = "visible";
+                }
+              });
           });
 
->>>>>>> 846e6e3cad7f9fcd3e63567c9422916834bbb06d
         if (index.style.display === "none") {
             dados1.style.display = "none";
             dados2.style.display = "none";
