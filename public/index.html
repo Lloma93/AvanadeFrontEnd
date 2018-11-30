@@ -152,6 +152,11 @@
              atualizaValorDaTabela1(3,2, user.followers);
              atualizaValorDaTabela1(4,2,user.following);
              atualizaValorDaTabela1(6,2,user.public_gists);
+
+             atualizaValorDaTabela1(2,3,user.public_repos * 20);
+             atualizaValorDaTabela1(3,3, user.followers * 10);
+             atualizaValorDaTabela1(4,3,user.following * 5);
+             atualizaValorDaTabela1(6,3,user.public_gists * 5);
              var contaBlog= 0;
              var blog = user.blog
              if (blog != null && blog != '') {
@@ -161,9 +166,11 @@
                contaBlog = 0;
              }
              atualizaValorDaTabela1(7,2,contaBlog);
+             atualizaValorDaTabela1(7,3,contaBlog * 100);
              document.getElementById("usuario1").innerHTML = nome;
-             getUserStars(nomeUsuario1, function (user) {
-               atualizaValorDaTabela1(5,2,user);
+             getUserStars(nomeUsuario1, function (stars) {
+               atualizaValorDaTabela1(5,2,stars);
+               atualizaValorDaTabela1(5,3,stars * 10);
              })
          });
          //processa dados usuário 2
@@ -176,6 +183,11 @@
               atualizaValorDaTabela2(3,2, user.followers);
               atualizaValorDaTabela2(4,2,user.following);
               atualizaValorDaTabela2(6,2,user.public_gists);
+
+              atualizaValorDaTabela2(2,3,user.public_repos * 20);
+              atualizaValorDaTabela2(3,3, user.followers * 10);
+              atualizaValorDaTabela2(4,3,user.following * 5);
+              atualizaValorDaTabela2(6,3,user.public_gists * 5);
               var contaBlog= 0;
               var blog = user.blog
               if (blog != null && blog != '') {
@@ -185,9 +197,11 @@
                 contaBlog = 0;
               }
               atualizaValorDaTabela2(7,2,contaBlog);
+              atualizaValorDaTabela2(7,3,contaBlog * 100);
               document.getElementById("usuario2").innerHTML = nome;
-              getUserStars(nomeUsuario2, function (user) {
-                atualizaValorDaTabela2(5,2,user);
+              getUserStars(nomeUsuario2, function (stars) {
+                atualizaValorDaTabela2(5,2,stars);
+                atualizaValorDaTabela2(5,3,stars * 10);
               })
           });
 
